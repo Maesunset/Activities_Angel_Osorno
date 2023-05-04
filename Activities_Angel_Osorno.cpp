@@ -7,26 +7,36 @@ using namespace std;
 int main()
 {
     int menu;
-    cout << " A que parcial desea ir" << endl;
-    cout << "----- 1) primer Parcial -----" << endl;
-    cout << "----- 2) segundo Parcial -----" << endl;
-    cout << "----- 3) tercer Parcial -----" << endl;
-    cout << "----- 4) cuarto Parcial -----" << endl;
-    cin >> menu;
-    switch (menu)
+    bool salir = true;
+    do
     {
-    case 1:
-        break;
-    case 2:
+        system("cls");
+        cout << " A que parcial desea ir" << endl;
+        cout << "----- 1) Primer Parcial -----" << endl;
+        cout << "----- 2) Segundo Parcial -----" << endl;
+        cout << "----- 3) Tercer Parcial -----" << endl;
+        cout << "----- 4) Cuarto Parcial -----" << endl;
+        cout << "--------- 5) Salir ----------" << endl;
+            cin >> menu;
+        switch (menu)
+        {
+        case 1:
+            Menu1P();
+            break;
+        case 2:
+            Menu2P();
+            break;
+        case 3:
 
-        break;
-    case 3:
-
-        break;
-    case 4:
-
-        break;
-    default:
-        break;
-    }
+            break;
+        case 4:
+    
+            break;
+        case 5: 
+            salir = false;
+            break;
+        default:
+            break;
+        }
+    } while (salir);
 }
