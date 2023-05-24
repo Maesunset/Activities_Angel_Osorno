@@ -8,6 +8,9 @@ void vectores();
 void guessTheWord();
 void mainScores();
 void scores(int &score1, int &score2);
+void mainDisplay();
+
+void display(const vector<string>& inventory);
 
 void Menu2P() {
 	int menu2p;
@@ -18,6 +21,7 @@ void Menu2P() {
 	cout << "1) Vectores" << endl;
 	cout << "2) guess the word" << endl;
 	cout << "3) cambio de scores" << endl;
+	cout << "4) display" << endl;
 		cin >> menu2p;
 		switch (menu2p)
 		{
@@ -29,6 +33,9 @@ void Menu2P() {
 			break;
 		case 3:
 			mainScores();
+			break;
+		case 4:
+			mainDisplay();
 			break;
 		default:
 			break;
@@ -95,13 +102,12 @@ void guessTheWord()
 		cout << " felicidades, ganaste " << endl;
 	}
 }
-
 void mainScores() 
 {
 	int score1 = 100, score2 = 40;
 	cout << "tus scores son: " << score1 << " , " << score2 << endl;
 	scores(score1, score2);
-	cout << "tus scores actualizados son: " << score1 << " , " << score2 << endl;
+	cout << "tus scores actualizados son:" << score1 << " , " << score2 << endl;
 	system("pause");
 }
 void scores(int &score1, int &score2) 
@@ -110,4 +116,21 @@ void scores(int &score1, int &score2)
 	swap = score1;
 	score1 = score2;
 	score2 = swap;
+}
+void mainDisplay() 
+{
+	vector<string> inventory;
+	inventory.push_back("espada");
+	inventory.push_back("armadura");
+	inventory.push_back("pistola");
+	inventory.push_back("granada");
+	display(inventory);
+}
+void display(const vector<string>& inventory) 
+{
+	for (int i = 0; i < inventory.size() ; i++)
+	{
+		cout << inventory[i] << endl;
+	}
+	system("pause");
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Primer_Parcial.h"
 #include "Segundo_Parcial.h"
+#include "Tercer_Parcial.h"
 
 using namespace std;
 
@@ -27,7 +28,7 @@ int main()
             Menu2P();
             break;
         case 3:
-
+            Menu3P();
             break;
         case 4:
     
